@@ -1,0 +1,18 @@
+// fixed-point numbers
+
+//Scaling Factor:
+
+// To convert between the raw value and the actual fixed-point number, a scaling factor is used.
+
+// For example, in a 16.16 format, the scaling factor is 
+// 2
+// 16
+// =
+// 65536
+// 2 
+// 16
+//  =65536.
+
+// To get the actual fixed-point number, divide the raw value by the scaling factor.
+
+// To get the raw value from a floating-point number, multiply by the scaling factor.
