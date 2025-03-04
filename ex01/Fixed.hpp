@@ -6,7 +6,7 @@
 /*   By: gmalyana <gmalyana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 19:16:32 by gmalyana          #+#    #+#             */
-/*   Updated: 2025/02/24 21:22:50 by gmalyana         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:51:44 by gmalyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <string>
 #include <stdint.h>
 
 

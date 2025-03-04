@@ -16,3 +16,5 @@
 // To get the actual fixed-point number, divide the raw value by the scaling factor.
 
 // To get the raw value from a floating-point number, multiply by the scaling factor.
+
+// For example, value = 5 becomes 5 << 8 = 1280 (binary: 00000101 00000000), which represents 5.0.
