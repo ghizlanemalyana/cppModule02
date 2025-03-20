@@ -6,13 +6,14 @@
 /*   By: gmalyana <gmalyana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 15:37:17 by gmalyana          #+#    #+#             */
-/*   Updated: 2025/03/07 15:37:46 by gmalyana         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:47:27 by gmalyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main( void ) {
+int main()
+{
 	Fixed a;
 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 	

@@ -6,14 +6,14 @@
 /*   By: gmalyana <gmalyana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 19:16:32 by gmalyana          #+#    #+#             */
-/*   Updated: 2025/03/07 16:29:10 by gmalyana         ###   ########.fr       */
+/*   Updated: 2025/03/19 18:07:07 by gmalyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
-#include <iostream>
+#include <iostream> 
 #include <string>
 #include <stdint.h>
 #include <cmath>
@@ -24,20 +24,19 @@ class Fixed{
 		int number;
 		static const int FractionalPartBits;
 	public:
-		Fixed(); //A default constructor that initializes the fixed-point number value to 0.
+		Fixed();
 		Fixed(const int Value);
 		Fixed(const float Value); 
-		Fixed(const Fixed& other);// copy constructor
-		Fixed& operator=(const Fixed& other);//A copy assignment operator overload.
+		Fixed(const Fixed& other);
+		Fixed& operator=(const Fixed& other);
 		~Fixed();
 
-		float toFloat( void ) const;//that returns the raw value of the fixed-point value
-		int toInt( void ) const;//that sets the raw value of the fixed-point number
-		int getRawBits( void ) const;//that returns the raw value of the fixed-point value
+		float toFloat( void ) const;
+		int toInt( void ) const;
+		int getRawBits( void ) const;
 		void setRawBits( int const raw);
 };
 
 std::ostream &operator<<(std::ostream &stream, const Fixed &obj);
-const int Fixed::FractionalPartBits = 8;
 
 #endif

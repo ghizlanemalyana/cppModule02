@@ -6,7 +6,7 @@
 /*   By: gmalyana <gmalyana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 15:38:07 by gmalyana          #+#    #+#             */
-/*   Updated: 2025/03/07 16:30:04 by gmalyana         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:33:31 by gmalyana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,35 @@ class Fixed{
 		Fixed& operator=(const Fixed& other);
 		~Fixed();
 
-		float toFloat( void ) const;
-		int toInt( void ) const;
-		int getRawBits( void ) const;
-		void setRawBits( int const raw);
+		float toFloat() const;
+		int toInt() const;
+		int getRawBits() const;
+		void setRawBits(int const raw);
+		
+		Fixed operator+(const Fixed &other) const;
+		Fixed operator-(const Fixed &other) const;
+		Fixed operator*(const Fixed &other) const;
+		Fixed operator/(const Fixed &other) const;
+		
+		bool operator==(const Fixed& other) const;
+		bool operator!=(const Fixed& other) const;
+		bool operator<=(const Fixed& other) const;
+		bool operator>=(const Fixed& other) const;
+		bool operator>(const Fixed& other) const;
+		bool operator<(const Fixed& other) const;
 
-		Fixed operator+(const Fixed &obj);
+		Fixed operator++(int);
+		Fixed& operator++();
+		Fixed operator--(int);
+		Fixed& operator--();
+		
+		static Fixed& min(Fixed& a, Fixed& b);
+		static Fixed& max(Fixed& a, Fixed& b);
+		static const Fixed& min(const Fixed& a, const Fixed& b);
+		static const Fixed& max(const Fixed& a, const Fixed& b);
 		
 };
 
-const int Fixed::FractionalPartBits = 8;
+std::ostream &operator<<(std::ostream &stream, const Fixed &obj);
 
 #endif
